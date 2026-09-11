@@ -1,0 +1,1995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BHOJ — Hyperlocal Marketplace</title>
+    <meta name="description"
+        content="BHOJ — Hyperlocal marketplace connecting customers, local businesses and delivery partners.">
+
+    <link rel="icon" type="image/jpeg" href="BHOJ Logo.jpg">
+
+    <!-- =========================
+         GOOGLE FONTS
+         Sora · Space Grotesk · Inter · JetBrains Mono
+    ========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="side">
+
+        <div class="brand">
+
+            <div class="brandmark">
+                <img src="BHOJ Logo.jpg" alt="BHOJ Logo" class="brand-logo">
+            </div>
+
+            <div class="brandtext">
+                <h1>BHOJ</h1>
+                <span>HYPERLOCAL MARKETPLACE</span>
+            </div>
+
+        </div>
+
+
+        <div class="student-label">
+            STUDENT-BUILT PRODUCT CONCEPT
+        </div>
+
+
+        <nav class="sidebar-nav" aria-label="Primary">
+
+            <button class="side-btn sel" data-page="home" onclick="go('home', this)">
+                <span aria-hidden="true">🏠</span>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="side-btn" data-page="customer" onclick="go('customer', this)">
+                <span aria-hidden="true">👤</span>
+                <span>Customer App</span>
+            </button>
+
+            <button class="side-btn" data-page="partner" onclick="go('partner', this)">
+                <span aria-hidden="true">🏪</span>
+                <span>Partner Panel</span>
+            </button>
+
+            <button class="side-btn" data-page="delivery" onclick="go('delivery', this)">
+                <span aria-hidden="true">🛵</span>
+                <span>Delivery Panel</span>
+            </button>
+
+            <button class="side-btn" data-page="admin" onclick="go('admin', this)">
+                <span aria-hidden="true">🛡️</span>
+                <span>Admin Dashboard</span>
+            </button>
+
+        </nav>
+
+
+        <div class="nav-divider"></div>
+
+
+        <div class="secondary-nav">
+
+            <button class="side-btn" onclick="demoMessage('Orders module')">
+                <span aria-hidden="true">📦</span>
+                <span>Orders</span>
+            </button>
+
+            <button class="side-btn" onclick="demoMessage('Analytics module')">
+                <span aria-hidden="true">📈</span>
+                <span>Analytics</span>
+            </button>
+
+            <button class="side-btn" onclick="demoMessage('Messages module')">
+                <span aria-hidden="true">💬</span>
+                <span>Messages</span>
+            </button>
+
+            <button class="side-btn" onclick="demoMessage('Reviews module')">
+                <span aria-hidden="true">⭐</span>
+                <span>Reviews</span>
+            </button>
+
+            <button class="side-btn" onclick="demoMessage('BHOJ Support')">
+                <span aria-hidden="true">❔</span>
+                <span>Support</span>
+            </button>
+
+        </div>
+
+
+        <div class="credit">
+
+            <div class="sj">
+                SJ
+            </div>
+
+            <div class="credit-text">
+                <strong>Built by Suraj Jha</strong>
+                <small>Interactive Prototype</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main>
+
+
+        <!-- =========================
+             TOP NAVIGATION
+        ========================== -->
+
+        <header class="topnav">
+
+            <div class="topnav-left">
+
+                <span class="top-badge">
+                    BHOJ PLATFORM
+                </span>
+
+            </div>
+
+
+            <nav class="top-links" aria-label="Secondary">
+
+                <button onclick="go('home')">
+                    Home
+                </button>
+
+                <button onclick="scrollToSection('features')">
+                    Features
+                </button>
+
+                <button onclick="scrollToSection('how-it-works')">
+                    How It Works
+                </button>
+
+                <button onclick="scrollToSection('partners')">
+                    Partners
+                </button>
+
+                <button onclick="scrollToSection('about')">
+                    About
+                </button>
+
+            </nav>
+
+
+            <button class="demo-top-btn" onclick="go('customer')">
+                🚀 Explore Demo
+            </button>
+
+        </header>
+
+
+
+        <!-- =========================
+             HOME PAGE
+        ========================== -->
+
+        <section id="home" class="page active">
+
+
+            <!-- HERO -->
+
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <div class="hero-copy">
+
+                        <span class="eyebrow">
+                            HYPERLOCAL MARKETPLACE PLATFORM
+                        </span>
+
+
+                        <h1>
+                            BHOJ
+                            <span>
+                                connects everything local.
+                            </span>
+                        </h1>
+
+
+                        <h2>
+                            One platform connecting customers,
+                            local businesses and delivery partners.
+                        </h2>
+
+
+                        <p>
+                            A student-built product concept designed
+                            to bring restaurants, grocery stores,
+                            services and delivery into one simple
+                            hyperlocal marketplace.
+                        </p>
+
+
+                        <!-- FEATURE CHIPS -->
+
+                        <div class="chips">
+
+                            <div class="chip">
+                                🏪 <b>Multi Business</b>
+                            </div>
+
+                            <div class="chip">
+                                📍 <b>Live Tracking</b>
+                            </div>
+
+                            <div class="chip">
+                                📊 <b>Smart Dashboard</b>
+                            </div>
+
+                            <div class="chip">
+                                🔐 <b>Role Based Access</b>
+                            </div>
+
+                        </div>
+
+
+                        <!-- HERO BUTTONS -->
+
+                        <div class="hero-actions">
+
+                            <button
+                                class="primary"
+                                onclick="go('customer')"
+                            >
+                                Open Customer Demo
+                            </button>
+
+                            <button
+                                class="secondary"
+                                onclick="go('admin')"
+                            >
+                                View Admin
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HERO LOGO -->
+
+                    <div class="hero-logo">
+
+                        <div class="hero-logo-inner">
+                            <img src="BHOJ Logo.jpg" alt="BHOJ Logo">
+                        </div>
+
+                        <strong>
+                            BHOJ
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- DEMO LABEL -->
+
+            <div class="demo-label">
+
+                <span>INTERACTIVE PROTOTYPE</span>
+
+                <small>
+                    Explore all four platform experiences
+                </small>
+
+            </div>
+
+
+
+            <!-- MODULES -->
+
+            <section id="features">
+
+                <div class="section-title">
+
+                    <div>
+                        <b>DEMO PANELS</b>
+                        <h2>
+                            One platform. Four experiences.
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <!-- CUSTOMER CARD -->
+
+                    <article class="card role-customer">
+
+                        <div class="ico">
+                            👤
+                        </div>
+
+                        <h3>
+                            Customer App
+                        </h3>
+
+                        <p class="muted">
+                            Discover local businesses,
+                            browse products, place orders
+                            and track delivery.
+                        </p>
+
+                        <button
+                            class="primary"
+                            onclick="go('customer')"
+                        >
+                            OPEN CUSTOMER
+                        </button>
+
+                    </article>
+
+
+                    <!-- PARTNER CARD -->
+
+                    <article class="card role-partner">
+
+                        <div class="ico">
+                            🏪
+                        </div>
+
+                        <h3>
+                            Partner Panel
+                        </h3>
+
+                        <p class="muted">
+                            Manage products, incoming orders,
+                            preparation and business performance.
+                        </p>
+
+                        <button
+                            class="primary"
+                            onclick="go('partner')"
+                        >
+                            OPEN PARTNER
+                        </button>
+
+                    </article>
+
+
+                    <!-- DELIVERY CARD -->
+
+                    <article class="card role-delivery">
+
+                        <div class="ico">
+                            🛵
+                        </div>
+
+                        <h3>
+                            Delivery Panel
+                        </h3>
+
+                        <p class="muted">
+                            Go online, accept deliveries,
+                            update status and view earnings.
+                        </p>
+
+                        <button
+                            class="primary"
+                            onclick="go('delivery')"
+                        >
+                            OPEN DELIVERY
+                        </button>
+
+                    </article>
+
+
+                    <!-- ADMIN CARD -->
+
+                    <article class="card role-admin">
+
+                        <div class="ico">
+                            🛡️
+                        </div>
+
+                        <h3>
+                            Admin Dashboard
+                        </h3>
+
+                        <p class="muted">
+                            Monitor users, partners, orders,
+                            revenue and platform analytics.
+                        </p>
+
+                        <button
+                            class="primary"
+                            onclick="go('admin')"
+                        >
+                            OPEN ADMIN
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FEATURE BAR -->
+
+            <section id="how-it-works" class="featurebar">
+
+                <div>
+                    <b>LOCAL FIRST</b>
+                    <span>
+                        Support nearby businesses
+                    </span>
+                </div>
+
+                <div>
+                    <b>REAL-TIME</b>
+                    <span>
+                        Order status updates
+                    </span>
+                </div>
+
+                <div>
+                    <b>SCALABLE</b>
+                    <span>
+                        Multiple business types
+                    </span>
+                </div>
+
+                <div>
+                    <b>SMART</b>
+                    <span>
+                        Data-driven dashboard
+                    </span>
+                </div>
+
+                <div>
+                    <b>CUSTOMIZABLE</b>
+                    <span>
+                        Adapt to any local model
+                    </span>
+                </div>
+
+            </section>
+
+
+
+            <!-- PARTNERS -->
+
+            <section id="partners" class="info-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <b>ECOSYSTEM</b>
+                        <h2>
+                            Built for the local economy
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="ecosystem-grid">
+
+                    <div class="ecosystem-card">
+                        <span>👤</span>
+                        <strong>Customers</strong>
+                        <small>
+                            Discover and order locally
+                        </small>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <span>🏪</span>
+                        <strong>Businesses</strong>
+                        <small>
+                            Grow through digital commerce
+                        </small>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <span>🛵</span>
+                        <strong>Delivery Partners</strong>
+                        <small>
+                            Earn through local deliveries
+                        </small>
+                    </div>
+
+                    <div class="ecosystem-card">
+                        <span>🛡️</span>
+                        <strong>Administration</strong>
+                        <small>
+                            Manage the complete platform
+                        </small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ABOUT -->
+
+            <section id="about" class="about-section">
+
+                <span class="eyebrow">
+                    ABOUT BHOJ
+                </span>
+
+                <h2>
+                    From local discovery to doorstep delivery.
+                </h2>
+
+                <p>
+                    BHOJ is a hyperlocal marketplace prototype
+                    designed as a unified digital platform for
+                    customers, local businesses, delivery partners
+                    and administrators.
+                </p>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =========================
+             CUSTOMER PAGE
+        ========================== -->
+
+        <section id="customer" class="page">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        CUSTOMER APP
+                    </span>
+
+                    <h1>
+                        Shop Everything Local.
+                    </h1>
+
+                    <p>
+                        Food, groceries, laundry and more —
+                        all in one marketplace.
+                    </p>
+
+                </div>
+
+
+                <div class="location-badge">
+                    📍 Demo Location
+                </div>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="search">
+
+                <input
+                    type="text"
+                    id="customerSearch"
+                    placeholder="Search restaurants, groceries, services..."
+                >
+
+                <button
+                    class="primary"
+                    onclick="filterBusinesses()"
+                >
+                    Search
+                </button>
+
+            </div>
+
+
+
+            <!-- BUSINESS CARDS -->
+
+            <div class="business-grid" id="businessGrid">
+
+
+                <article
+                    class="business-card"
+                    data-name="food corner pizza burgers fast food restaurant"
+                >
+
+                    <div class="business-icon">
+                        🍕
+                    </div>
+
+                    <div class="business-card-content">
+
+                        <div class="business-title">
+
+                            <h3>
+                                Food Corner
+                            </h3>
+
+                            <span class="open">
+                                OPEN
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Pizza • Burgers • Fast Food
+                        </p>
+
+                        <div class="business-meta">
+
+                            <span>
+                                ⭐ 4.6
+                            </span>
+
+                            <span>
+                                • 25–35 min
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="primary"
+                            onclick="place('Food Corner')"
+                        >
+                            View & Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="business-card"
+                    data-name="fresh basket groceries essentials grocery"
+                >
+
+                    <div class="business-icon">
+                        🛒
+                    </div>
+
+                    <div class="business-card-content">
+
+                        <div class="business-title">
+
+                            <h3>
+                                Fresh Basket
+                            </h3>
+
+                            <span class="open">
+                                OPEN
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Groceries • Essentials
+                        </p>
+
+                        <div class="business-meta">
+
+                            <span>
+                                ⭐ 4.7
+                            </span>
+
+                            <span>
+                                • 20–30 min
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="primary"
+                            onclick="place('Fresh Basket')"
+                        >
+                            View & Order
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="business-card"
+                    data-name="quick laundry wash iron pickup laundry service"
+                >
+
+                    <div class="business-icon">
+                        👕
+                    </div>
+
+                    <div class="business-card-content">
+
+                        <div class="business-title">
+
+                            <h3>
+                                Quick Laundry
+                            </h3>
+
+                            <span class="open">
+                                OPEN
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Wash • Iron • Pickup
+                        </p>
+
+                        <div class="business-meta">
+
+                            <span>
+                                ⭐ 4.8
+                            </span>
+
+                            <span>
+                                • Same day
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="primary"
+                            onclick="place('Quick Laundry')"
+                        >
+                            Book Service
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article
+                    class="business-card"
+                    data-name="city pharmacy health wellness medicine"
+                >
+
+                    <div class="business-icon">
+                        🏪
+                    </div>
+
+                    <div class="business-card-content">
+
+                        <div class="business-title">
+
+                            <h3>
+                                City Pharmacy
+                            </h3>
+
+                            <span class="open">
+                                OPEN
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Health & Wellness
+                        </p>
+
+                        <div class="business-meta">
+
+                            <span>
+                                ⭐ 4.5
+                            </span>
+
+                            <span>
+                                • 15–25 min
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="primary"
+                            onclick="place('City Pharmacy')"
+                        >
+                            View Store
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- CURRENT ORDER -->
+
+            <div class="panel order-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <span>CURRENT ORDER</span>
+
+                        <h2 id="orderTitle">
+                            Choose a business
+                        </h2>
+                    </div>
+
+                    <span
+                        class="status"
+                        id="orderStatus"
+                    >
+                        DEMO
+                    </span>
+
+                </div>
+
+
+                <div class="order-tracker">
+
+                    <div class="tracker-step active">
+                        <span>1</span>
+                        <small>Order Placed</small>
+                    </div>
+
+                    <div class="tracker-line"></div>
+
+                    <div class="tracker-step">
+                        <span>2</span>
+                        <small>Confirmed</small>
+                    </div>
+
+                    <div class="tracker-line"></div>
+
+                    <div class="tracker-step">
+                        <span>3</span>
+                        <small>Preparing</small>
+                    </div>
+
+                    <div class="tracker-line"></div>
+
+                    <div class="tracker-step">
+                        <span>4</span>
+                        <small>Out for Delivery</small>
+                    </div>
+
+                    <div class="tracker-line"></div>
+
+                    <div class="tracker-step">
+                        <span>5</span>
+                        <small>Delivered</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PARTNER PAGE
+        ========================== -->
+
+        <section id="partner" class="page">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        PARTNER PANEL
+                    </span>
+
+                    <h1>
+                        Partner Dashboard
+                    </h1>
+
+                    <p>
+                        Manage your business and incoming orders.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary"
+                    onclick="demoMessage('Product creation form')"
+                >
+                    ＋ Add Product
+                </button>
+
+            </div>
+
+
+
+            <!-- PARTNER STATS -->
+
+            <div class="stats">
+
+                <div class="stat">
+                    <small>
+                        TODAY'S ORDERS
+                    </small>
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <span>
+                        +12% today
+                    </span>
+                </div>
+
+
+                <div class="stat">
+                    <small>
+                        PENDING
+                    </small>
+
+                    <strong>
+                        4
+                    </strong>
+
+                    <span>
+                        Needs attention
+                    </span>
+                </div>
+
+
+                <div class="stat">
+                    <small>
+                        REVENUE
+                    </small>
+
+                    <strong>
+                        ₹8,450
+                    </strong>
+
+                    <span>
+                        Today's revenue
+                    </span>
+                </div>
+
+
+                <div class="stat">
+                    <small>
+                        RATING
+                    </small>
+
+                    <strong>
+                        4.7 ⭐
+                    </strong>
+
+                    <span>
+                        Customer rating
+                    </span>
+                </div>
+
+            </div>
+
+
+
+            <!-- INCOMING ORDERS -->
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            INCOMING ORDERS
+                        </span>
+
+                        <h2>
+                            Recent Orders
+                        </h2>
+
+                    </div>
+
+                    <span class="live">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Order</th>
+                                <th>Customer</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #BHOJ1048
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Customer 01
+                                </td>
+
+                                <td>
+                                    ₹420
+                                </td>
+
+                                <td>
+                                    <span class="status new">
+                                        NEW
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="primary small-btn"
+                                        onclick="demoMessage('Order accepted!')"
+                                    >
+                                        Accept
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #BHOJ1047
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Customer 02
+                                </td>
+
+                                <td>
+                                    ₹680
+                                </td>
+
+                                <td>
+                                    <span class="status preparing">
+                                        PREPARING
+                                    </span>
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="primary small-btn"
+                                        onclick="demoMessage('Marked ready!')"
+                                    >
+                                        Ready
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PARTNER PERFORMANCE -->
+
+            <div class="two-column">
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <span>BUSINESS PERFORMANCE</span>
+                            <h2>Today's Overview</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div>
+                            <span>Orders completed</span>
+                            <b>82%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:82%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div>
+                            <span>Customer satisfaction</span>
+                            <b>94%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:94%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="progress-item">
+
+                        <div>
+                            <span>Preparation efficiency</span>
+                            <b>88%</b>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:88%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <span>QUICK ACTIONS</span>
+                            <h2>Manage Business</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <button onclick="demoMessage('Products module')">
+                            🛍️ Products
+                        </button>
+
+                        <button onclick="demoMessage('Offers module')">
+                            🎁 Offers
+                        </button>
+
+                        <button onclick="demoMessage('Business profile')">
+                            🏪 Profile
+                        </button>
+
+                        <button onclick="demoMessage('Partner analytics')">
+                            📊 Analytics
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DELIVERY PAGE
+        ========================== -->
+
+        <section id="delivery" class="page">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        DELIVERY PANEL
+                    </span>
+
+                    <h1>
+                        Delivery Partner
+                    </h1>
+
+                    <p>
+                        Manage deliveries, status and earnings.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary"
+                    id="online"
+                    onclick="toggleOnline()"
+                >
+                    Go Online
+                </button>
+
+            </div>
+
+
+
+            <!-- DELIVERY STATS -->
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <small>
+                        TODAY'S DELIVERIES
+                    </small>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <span>
+                        Completed
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <small>
+                        EARNINGS
+                    </small>
+
+                    <strong>
+                        ₹1,080
+                    </strong>
+
+                    <span>
+                        Today's earnings
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <small>
+                        ACTIVE
+                    </small>
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <span>
+                        Current deliveries
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <small>
+                        RATING
+                    </small>
+
+                    <strong>
+                        4.9 ⭐
+                    </strong>
+
+                    <span>
+                        Excellent rating
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIVE DELIVERY -->
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            ACTIVE DELIVERY
+                        </span>
+
+                        <h2>
+                            Current Assignment
+                        </h2>
+
+                    </div>
+
+                    <span class="live">
+                        ● ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="delivery-card">
+
+                    <div class="delivery-icon">
+                        📦
+                    </div>
+
+
+                    <div class="delivery-details">
+
+                        <strong>
+                            #BHOJ1047 — Fresh Basket
+                        </strong>
+
+                        <span>
+                            Pickup: MG Road
+                        </span>
+
+                        <span>
+                            Drop: Customer Location
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="primary"
+                        onclick="demoMessage('Delivery status: Out for Delivery')"
+                    >
+                        Start Delivery
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DELIVERY FLOW -->
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            DELIVERY FLOW
+                        </span>
+
+                        <h2>
+                            How a delivery works
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="delivery-flow">
+
+                    <div>
+                        <span>01</span>
+                        <strong>Go Online</strong>
+                        <small>
+                            Become available
+                        </small>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <strong>Accept</strong>
+                        <small>
+                            Accept an assignment
+                        </small>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <strong>Pickup</strong>
+                        <small>
+                            Collect the order
+                        </small>
+                    </div>
+
+                    <div>
+                        <span>04</span>
+                        <strong>Deliver</strong>
+                        <small>
+                            Complete the delivery
+                        </small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ADMIN PAGE
+        ========================== -->
+
+        <section id="admin" class="page">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        ADMIN DASHBOARD
+                    </span>
+
+                    <h1>
+                        BHOJ Control Center
+                    </h1>
+
+                    <p>
+                        Monitor the complete BHOJ ecosystem.
+                    </p>
+
+                </div>
+
+
+                <span class="admin-badge">
+                    🛡️ ADMIN
+                </span>
+
+            </div>
+
+
+
+            <!-- ADMIN STATS -->
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <small>
+                        TOTAL CUSTOMERS
+                    </small>
+
+                    <strong>
+                        2,486
+                    </strong>
+
+                    <span>
+                        Registered users
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <small>
+                        PARTNERS
+                    </small>
+
+                    <strong>
+                        184
+                    </strong>
+
+                    <span>
+                        Active businesses
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <small>
+                        ORDERS
+                    </small>
+
+                    <strong>
+                        8,942
+                    </strong>
+
+                    <span>
+                        Total orders
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <small>
+                        REVENUE
+                    </small>
+
+                    <strong>
+                        ₹12.4L
+                    </strong>
+
+                    <span>
+                        Platform revenue
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RECENT ORDERS -->
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            PLATFORM ACTIVITY
+                        </span>
+
+                        <h2>
+                            Recent Orders
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="secondary small-btn"
+                        onclick="demoMessage('All orders module')"
+                    >
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Business</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #BHOJ1048
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Food Corner
+                                </td>
+
+                                <td>
+                                    Food
+                                </td>
+
+                                <td>
+                                    ₹420
+                                </td>
+
+                                <td>
+                                    <span class="status delivered">
+                                        DELIVERED
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #BHOJ1047
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Fresh Basket
+                                </td>
+
+                                <td>
+                                    Grocery
+                                </td>
+
+                                <td>
+                                    ₹680
+                                </td>
+
+                                <td>
+                                    <span class="status out">
+                                        OUT FOR DELIVERY
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        #BHOJ1046
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Quick Laundry
+                                </td>
+
+                                <td>
+                                    Service
+                                </td>
+
+                                <td>
+                                    ₹310
+                                </td>
+
+                                <td>
+                                    <span class="status processing">
+                                        PROCESSING
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADMIN ANALYTICS -->
+
+            <div class="two-column">
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>
+                                PLATFORM ANALYTICS
+                            </span>
+
+                            <h2>
+                                Weekly Orders
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart">
+
+                        <div class="chart-bar" style="height:45%">
+                            <span>Mon</span>
+                        </div>
+
+                        <div class="chart-bar" style="height:62%">
+                            <span>Tue</span>
+                        </div>
+
+                        <div class="chart-bar" style="height:52%">
+                            <span>Wed</span>
+                        </div>
+
+                        <div class="chart-bar" style="height:75%">
+                            <span>Thu</span>
+                        </div>
+
+                        <div class="chart-bar" style="height:68%">
+                            <span>Fri</span>
+                        </div>
+
+                        <div class="chart-bar" style="height:88%">
+                            <span>Sat</span>
+                        </div>
+
+                        <div class="chart-bar" style="height:78%">
+                            <span>Sun</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PLATFORM MODEL -->
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span>
+                                PLATFORM MODEL
+                            </span>
+
+                            <h2>
+                                BHOJ Ecosystem
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flow">
+
+                        <div>
+                            👤
+                            <span>Customer</span>
+                        </div>
+
+                        <b>→</b>
+
+                        <div>
+                            <strong>BHOJ</strong>
+                            <span>Platform</span>
+                        </div>
+
+                        <b>→</b>
+
+                        <div>
+                            🏪
+                            <span>Business</span>
+                        </div>
+
+                        <b>→</b>
+
+                        <div>
+                            🛵
+                            <span>Delivery</span>
+                        </div>
+
+                        <b>→</b>
+
+                        <div>
+                            👤
+                            <span>Customer</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SYSTEM STATUS -->
+
+            <div class="panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            SYSTEM STATUS
+                        </span>
+
+                        <h2>
+                            Platform Health
+                        </h2>
+
+                    </div>
+
+                    <span class="live">
+                        ● OPERATIONAL
+                    </span>
+
+                </div>
+
+
+                <div class="health-grid">
+
+                    <div>
+                        <span>
+                            Customer App
+                        </span>
+
+                        <strong>
+                            Operational
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            Partner Network
+                        </span>
+
+                        <strong>
+                            Operational
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            Delivery Network
+                        </span>
+
+                        <strong>
+                            Operational
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            Order System
+                        </span>
+
+                        <strong>
+                            Operational
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ORDER SIMULATION -->
+
+            <div class="panel simulation-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span>
+                            DEMO MODE
+                        </span>
+
+                        <h2>
+                            Order Status Simulation
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="primary"
+                        onclick="nextStatus()"
+                    >
+                        Simulate Next Status
+                    </button>
+
+                </div>
+
+
+                <div class="simulation-status">
+
+                    <span id="simulationText">
+                        Order Placed
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer>
+
+            <div class="footer-highlight">
+                © 2026 BHOJ
+            </div>
+
+            <div class="footer-highlight">
+                Student-built Interactive Prototype
+            </div>
+
+            <span class="footer-highlight">
+                Built by Suraj Jha (SJ)
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+</body>
+</html>
