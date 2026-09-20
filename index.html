@@ -119,8 +119,8 @@
 
         <div class="credit">
 
-            <div class="sj">
-                SJ
+            <div class="sj" onclick="openPhoto()" role="button" tabindex="0" aria-label="View founder photo">
+                <img src="Suraj-Jha.image.png" alt="Suraj Jha" class="sj-photo">
             </div>
 
             <div class="credit-text">
@@ -1990,6 +1990,19 @@
     </main>
 
 </div>
+
+
+<!-- =========================================================
+     PHOTO MODAL — Click founder photo to view full size
+========================================================== -->
+
+<div class="photo-modal" id="photoModal" onclick="closePhoto()">
+    <div class="photo-modal-content">
+        <img src="Suraj-Jha.image.png" alt="Suraj Jha">
+        <p class="photo-modal-caption">Suraj Jha · Founder, BHOJ</p>
+    </div>
+</div>
+
 
 </body>
 </html>
