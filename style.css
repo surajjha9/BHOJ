@@ -332,7 +332,7 @@ input:focus-visible {
 
 
 /* =========================================================
-   SIDEBAR CREDIT
+   SIDEBAR CREDIT — Founder Card
 ========================================================= */
 
 .credit {
@@ -362,20 +362,42 @@ input:focus-visible {
     width: 36px;
     height: 36px;
 
-    border-radius: 10px;
+    border-radius: 50%;
 
     display: grid;
     place-items: center;
 
+    overflow: hidden;
+
     background: var(--yellow);
 
-    color: #050505;
+    border: 1px solid rgba(223, 255, 0, 0.4);
 
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 12.5px;
+    flex-shrink: 0;
 
-    letter-spacing: -0.02em;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.sj:hover {
+    transform: scale(1.08);
+
+    box-shadow: 0 0 15px rgba(223, 255, 0, 0.35);
+}
+
+
+.sj-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    display: block;
 }
 
 
@@ -752,10 +774,6 @@ main {
    HERO LOGO — PERFECTLY CENTERED
 ========================================================= */
 
-/* =========================================================
-   HERO LOGO — PERFECTLY CENTERED
-========================================================= */
-
 .hero-logo {
     width: 260px;
     min-width: 260px;
@@ -821,6 +839,7 @@ main {
 
     display: block;
 }
+
 
 .hero-logo strong {
     color: var(--yellow);
@@ -970,29 +989,29 @@ main {
 
 /* =========================================================
    DELIVERY ONLINE / OFFLINE BUTTON
-   Online → RED | Offline → GREEN
+   Online (Go Offline) → GREEN | Offline (Go Online) → RED
 ========================================================= */
 
 .primary.online-active {
-    background: var(--red);
-    border-color: var(--red);
-    color: #ffffff;
-}
-
-.primary.online-active:hover {
-    box-shadow:
-        0 8px 22px rgba(255, 48, 48, 0.25);
-}
-
-.primary.offline-active {
     background: var(--green);
     border-color: var(--green);
     color: #050505;
 }
 
-.primary.offline-active:hover {
+.primary.online-active:hover {
     box-shadow:
         0 8px 22px rgba(53, 229, 138, 0.25);
+}
+
+.primary.offline-active {
+    background: var(--red);
+    border-color: var(--red);
+    color: #ffffff;
+}
+
+.primary.offline-active:hover {
+    box-shadow:
+        0 8px 22px rgba(255, 48, 48, 0.25);
 }
 
 
@@ -2665,6 +2684,109 @@ footer span {
         transform: translateY(0);
     }
 
+}
+
+
+/* =========================================================
+   PHOTO MODAL — Full size photo on click
+========================================================= */
+
+.photo-modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    backdrop-filter: blur(8px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    padding: 20px;
+
+    cursor: zoom-out;
+}
+
+
+.photo-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.photo-modal-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    transform: scale(0.9);
+
+    transition: transform 0.3s ease;
+
+    max-width: 500px;
+
+    width: 100%;
+
+    cursor: default;
+}
+
+
+.photo-modal.active .photo-modal-content {
+    transform: scale(1);
+}
+
+
+.photo-modal-content img {
+    width: 100%;
+
+    max-width: 420px;
+
+    height: auto;
+
+    border-radius: 20px;
+
+    border: 2px solid rgba(223, 255, 0, 0.5);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(223, 255, 0, 0.15);
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.photo-modal-caption {
+    color: var(--yellow);
+
+    font-family: var(--font-head);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+    text-align: center;
 }
 
 
